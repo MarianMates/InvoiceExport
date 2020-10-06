@@ -18,7 +18,7 @@ class Evozon_InvoiceExport_ExportController extends Mage_Adminhtml_Controller_Ac
             $exporter = $pdf = Mage::getModel('evozon_exporter/export');
 
             $invoiceNumber = $exporter->execute();
-            Mage::getSingleton('core/session')->addSuccess($invoiceNumber . ' Invoices have been exported to MAGENTO_ROOT/var folder');
+            Mage::getSingleton('core/session')->addSuccess($invoiceNumber . ' Invoices have been exported to MAGENTO_ROOT/var/invoice_export folder');
         } catch (Exception $e) {
             Mage::log($e->getMessage(),null,'invoice_export.log',true);
             Mage::getSingleton('core/session')->addError($e->getMessage());
