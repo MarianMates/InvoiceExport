@@ -1,0 +1,15 @@
+<config>
+	<menu>
+		<export translate="title" module="Evozon_InvoiceExport">
+			<title>Sales Export</title>
+			<sort_order>1</sort_order>
+			<children>
+				<invoice>
+					<title>Invoice</title>
+					<sort_order>1</sort_order>
+					<action>adminhtml/export/invoice</action>
+				</invoice>
+			</children>
+		</export>
+	</menu>
+</config>

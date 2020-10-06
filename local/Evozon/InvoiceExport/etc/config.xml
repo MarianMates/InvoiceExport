@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Evozon_InvoiceExport>
+			<version>0.1.0</version>
+		</Evozon_InvoiceExport>
+	</modules>
+	<admin>
+		<routers>
+			<adminhtml>
+				<args>
+					<modules>
+						<Evozon_InvoiceExport after="Mage_Adminhtml">Evozon_InvoiceExport</Evozon_InvoiceExport>
+					</modules>
+				</args>
+			</adminhtml>
+		</routers>
+	</admin>
+	<global>
+		<helpers>
+			<Evozon_InvoiceExport>
+				<class>Evozon_InvoiceExport_Helper</class>
+			</Evozon_InvoiceExport>
+		</helpers>
+		<models>
+			<evozon_exporter>
+				<class>Evozon_InvoiceExport_Model</class>
+			</evozon_exporter>
+		</models>
+	</global>
+</config>
